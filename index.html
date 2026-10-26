@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juego gratis para adivinar un número del 1 al 20.">
+  <title>Adivina el Número 🎮</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <div class="emoji" aria-hidden="true">🎯</div>
+
+    <h1>Adivina el Número</h1>
+    <p class="subtitle">
+      Encuentra el número secreto entre 1 y 20.
+    </p>
+
+    <div class="number-box" id="secret-number" aria-label="Número secreto">
+      ?
+    </div>
+
+    <p id="message" role="status" aria-live="polite">
+      ¡Estoy pensando en un número!
+    </p>
+
+    <form id="guess-form">
+      <label for="guess">Tu número:</label>
+      <input
+        type="number"
+        id="guess"
+        min="1"
+        max="20"
+        step="1"
+        placeholder="Del 1 al 20"
+        required
+      >
+      <button type="submit" id="guess-button">
+        Probar suerte
+      </button>
+    </form>
+
+    <p class="attempts">
+      Intentos: <span id="attempts">0</span>
+    </p>
+
+    <button type="button" id="restart" class="secondary">
+      🔄 Nueva partida
+    </button>
+
+    <p class="footer">Hecho con HTML, CSS y JavaScript</p>
+  </main>
+</body>
+</html>
